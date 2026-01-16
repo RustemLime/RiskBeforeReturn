@@ -1,0 +1,124 @@
+================================================================================
+RISK BEFORE RETURN: VOLATILITY TARGETING STRATEGIES ANALYSIS
+================================================================================
+
+================================================================================
+CONFIGURATION PARAMETERS
+================================================================================
+
+Analysis Periods:
+  In-Sample Period: 2003-12-01 to 2020-04-30
+  Out-of-Sample Period: 2020-05-01 to 2026-01-16
+  Whole Period: 2003-12-01 to 2026-01-16
+
+Volatility Targeting Parameters:
+  Target Volatility: 10.0% (0.1)
+  Trading Days Per Year: 252
+  Scale Factor (for realized volatility): 1.3
+
+Strategy Parameters:
+  Moving Average Window (MA): 200 days
+  Historical Volatility Window (HV): 30 days
+  Realized Volatility Window (RV): 2 days
+
+Portfolio Parameters:
+  Initial Capital: $100,000
+  Transaction Cost: 0.0% (0.0) per unit of allocation change
+
+Data Parameters:
+  Cache Directory: data_cache
+
+================================================================================
+PERFORMANCE METRICS: IN-SAMPLE
+Period: 2003-12-01 to 2020-04-30
+================================================================================
+
+                  CAGR  Annualized Excess Return  Annualized Volatility  Sharpe Ratio  Maximum Drawdown  Win Rate  Total Return
+Buy-and-Hold  0.083951                  0.086413               0.191931      0.450227         -0.551888  0.548778      2.754347
+30D HV        0.067015                  0.057388               0.101675      0.564429         -0.229864  0.544178      1.899350
+VIX           0.053493                  0.042601               0.079479      0.536001         -0.229916  0.548778      1.351810
+2D RV         0.069324                  0.058142               0.086758      0.670167         -0.185960  0.548535      2.004033
+200D MA       0.059518                  0.051123               0.109150      0.468378         -0.204867  0.416606      1.582540
+
+================================================================================
+PERFORMANCE METRICS: OUT-OF-SAMPLE
+Period: 2020-05-01 to 2026-01-16
+================================================================================
+
+                  CAGR  Annualized Excess Return  Annualized Volatility  Sharpe Ratio  Maximum Drawdown  Win Rate  Total Return
+Buy-and-Hold  0.181037                  0.153443               0.172985      0.887030         -0.244949  0.548432      1.585300
+30D HV        0.125350                  0.095453               0.103833      0.919297         -0.122219  0.548432      0.962326
+VIX           0.094651                  0.065288               0.077032      0.847553         -0.114871  0.548432      0.675723
+2D RV         0.103963                  0.075014               0.091601      0.818927         -0.139637  0.548432      0.758739
+200D MA       0.160123                  0.128248               0.123703      1.036742         -0.181284  0.453659      1.334614
+
+================================================================================
+PERFORMANCE METRICS: WHOLE PERIOD
+Period: 2003-12-01 to 2026-01-16
+================================================================================
+
+                  CAGR  Annualized Excess Return  Annualized Volatility  Sharpe Ratio  Maximum Drawdown  Win Rate  Total Return
+Buy-and-Hold  0.108201                  0.103694               0.187224      0.553850         -0.551888  0.548688      8.706113
+30D HV        0.081764                  0.067202               0.102232      0.657351         -0.229864  0.545275      4.689470
+VIX           0.063956                  0.048450               0.078851      0.614451         -0.229916  0.548688      2.940983
+2D RV         0.078148                  0.062492               0.088025      0.709938         -0.185960  0.548509      4.283312
+200D MA       0.084604                  0.071007               0.113089      0.627885         -0.204867  0.426159      5.029234
+
+================================================================================
+KEY FINDINGS BY PERIOD
+================================================================================
+
+
+In-Sample:
+--------------------------------------------------------------------------------
+  Best Sharpe Ratio: 2D RV (0.670)
+  Lowest Maximum Drawdown: 2D RV (-18.596%)
+  Highest CAGR: Buy-and-Hold (8.395%)
+
+Out-of-Sample:
+--------------------------------------------------------------------------------
+  Best Sharpe Ratio: 200D MA (1.037)
+  Lowest Maximum Drawdown: VIX (-11.487%)
+  Highest CAGR: Buy-and-Hold (18.104%)
+
+Whole Period:
+--------------------------------------------------------------------------------
+  Best Sharpe Ratio: 2D RV (0.710)
+  Lowest Maximum Drawdown: 2D RV (-18.596%)
+  Highest CAGR: Buy-and-Hold (10.820%)
+
+================================================================================
+COMPARISON WITH PAPER FINDINGS
+================================================================================
+
+Expected findings from the paper:
+- 2D RV should achieve higher Sharpe ratio than 30D HV and VIX
+- Volatility targeting strategies should have lower volatility than buy-and-hold
+- Volatility targeting should reduce maximum drawdowns
+
+
+================================================================================
+IN-SAMPLE PERFORMANCE
+================================================================================
+
+✓ REPLICATED: 2D RV has higher Sharpe ratio than 30D HV and VIX
+
+================================================================================
+OUT-OF-SAMPLE PERFORMANCE
+================================================================================
+
+This section shows how the strategies performed after the original paper period.
+This helps assess whether the findings hold in unseen data.
+
+✗ NOT REPLICATED: 2D RV does not have the highest Sharpe ratio
+
+================================================================================
+WHOLE PERIOD PERFORMANCE
+================================================================================
+
+This section shows how the strategies performed over the entire analysis period.
+This helps assess whether the findings hold across the entire period.
+
+✓ REPLICATED: 2D RV has higher Sharpe ratio than 30D HV and VIX
+
+================================================================================
