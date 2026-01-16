@@ -146,5 +146,7 @@ If you encounter issues:
 
 ## References
 
-Paper: "Risk Before Return: Targeting Volatility with Higher Frequency Data"
+Paper: ["Risk Before Return: Targeting Volatility with Higher Frequency Data", Tony Barchetto, Ryan Poirier](https://saltfinancial.com/static/uploads/2020/06/Risk%20Before%20Return%20-%20Targeting%20Volatility%20with%20Higher%20Frequency%20Data-FINAL.pdf)
+
+
 
